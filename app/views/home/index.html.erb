@@ -1,1 +1,8 @@
-<h1>Home#Index</h1>
+<div class="welcome-box">
+  <h1><%= t(:welcome) %></h1>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
+  <%= link_to t(:logout), logout_path, method: "delete" %>
+</div>
