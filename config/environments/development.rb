@@ -52,5 +52,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.root_directory = ENV["ROOT_DIRECTORY_BASIC_AUTH"] || "/basic-authentication"
+  config.root_directory = ENV["ROOT_DIRECTORY_BASIC_AUTH"] || "/"
 end

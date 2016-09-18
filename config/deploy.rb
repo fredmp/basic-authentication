@@ -9,8 +9,6 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    0
 set :rbenv_ruby,      File.read('.ruby-version').strip
 set :bundle_flags,    '--deployment --quiet'
-
-# Don't change these unless you know what you're doing
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
@@ -24,17 +22,7 @@ set :puma_error_log,  "#{release_path}/log/puma.access.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
-set :puma_init_active_record, true  # Change to false when not using ActiveRecord
-
-## Defaults:
-# set :scm,           :git
-# set :branch,        :master
-# set :format,        :pretty
-# set :log_level,     :debug
-# set :keep_releases, 5
-
-#set :linked_files, %w{config/database.yml config/secrets.yml}
-#set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :puma_init_active_record, true
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
