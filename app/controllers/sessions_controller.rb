@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/login', notice: I18n.t(:logout_message)
+    redirect_to login_path, notice: I18n.t(:logout_message)
   end
 
   private
