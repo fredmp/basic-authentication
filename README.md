@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple login form to check user credentials through an API mock - using ruby 2.3.1 and rails 5.0
 
-Things you may want to cover:
+#### To run the app you can use the following commands:
 
-* Ruby version
+```bash
+$ bundle
+$ rails db:migrate db:test:prepare
+```
+#### To access:
 
-* System dependencies
+- user: anyvalid@email.com
+- password: anyvalidpwd
+- *(The mock will accept any valid credentials)*
 
-* Configuration
+#### To run the tests:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ rspec --format documentation
+```
